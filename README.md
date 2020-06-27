@@ -1,1 +1,1 @@
-# go_exemplo_teste_unitario
+# Exemplo CI - Rodando teste unitário do Golang
