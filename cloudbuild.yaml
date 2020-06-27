@@ -14,6 +14,6 @@ steps:
         name: 'gcr.io/cloud-builders/docker'
         args: ['run', 'gcr.io/$PROJECT_ID/go-soma']
     
-    images: ['gcr.io/$PROJECT_ID/go-soma:latest'] 
-    tags: ['cloud-builders-community']
+images: ['gcr.io/$PROJECT_ID/go-soma:latest'] 
+tags: ['cloud-builders-community']
 
