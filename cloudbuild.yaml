@@ -1,0 +1,18 @@
+steps:
+    - 
+        id: "Verificando versão"
+        name: "gcr.io/cloud-builders/go"
+        args: ["version"]
+        env: ["GOPATH=."]
+
+    - 
+        id: "Rodando teste"
+        name: "gcr.io/cloud-builders/go"
+        args: ["test","soma"]
+        env: ["GOPATH=."]
+
+    - 
+        id: "Rodando soma"
+        name: "gcr.io/cloud-builders/go"
+        args: ["run","soma"]
+        env: ["GOPATH=."]
