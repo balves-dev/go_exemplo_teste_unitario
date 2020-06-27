@@ -5,7 +5,7 @@ RUN apk update && apk add --no-cache git ca-certificates tzdata && update-ca-cer
 WORKDIR $GOPATH/src/soma
 COPY . .
 
-RUN go get -d -v
+# RUN go get -d -v
 
 RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build \
       -ldflags='-w -s -extldflags "-static"' -a \
@@ -13,6 +13,6 @@ RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build \
 
 FROM scratch
 
-COPY --from=builder /go/bin/soma /go/bin/soma
+COPY --from=builder /go/bin/soma .
 
 ENTRYPOINT ["/go/bin/soma"]
