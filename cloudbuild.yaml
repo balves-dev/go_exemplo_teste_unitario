@@ -3,9 +3,9 @@ steps:
         id: "Rodando teste"
         name: 'gcr.io/cloud-builders/go:alpine'
         args: ['test', 'soma']
-
+    
     - 
-        id: "Buidando imagem"
+        id: "build imagem"
         name: 'gcr.io/cloud-builders/docker'
         args: ['build', '--tag=gcr.io/$PROJECT_ID/go-soma', '.']
 
