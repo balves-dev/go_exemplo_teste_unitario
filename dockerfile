@@ -3,7 +3,7 @@ FROM golang:1.14.1-alpine3.11 as builder
 RUN apk update && apk add --no-cache git ca-certificates tzdata && update-ca-certificates
 
 WORKDIR $GOPATH/src/soma
-COPY ./src/soma/soma.go .
+COPY . .
 
 # RUN go get -d -v
 
