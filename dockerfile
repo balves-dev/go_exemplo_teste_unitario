@@ -7,4 +7,4 @@ RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -ldflags '-w -extldf
 FROM scratch
 COPY --from=builder  /go/src/soma . 
 
-CMD [ "./soma" ]
+CMD ["./soma"]
